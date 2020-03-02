@@ -67,6 +67,14 @@ const helloAsync = async () => {
 
 helloAsync();
 
+const helloWorld = () => {
+  return new Promise((resolve, reject)=>{
+    (true)
+      ? setTimeout(()=> resolve("Hello World!"), 3000)
+      : reject(new Error("Test Error"))
+  })
+}
+
 const AnotherFunction = async() => {
   try{
     const hello = await helloWorld();
@@ -75,3 +83,5 @@ const AnotherFunction = async() => {
     console.error(error);
   }
 }
+
+AnotherFunction();
