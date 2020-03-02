@@ -139,3 +139,54 @@ const helloPromise = () => {
 helloPromise()
   .then(response => console.log(response))
   .catch(error => console.log(error))
+
+
+/**
+ * Class
+ */
+
+class Calculator {
+  constructor(){
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+
+  sum(valueA, valueB){
+    this.valueA = valueA;
+    this.valueB = valueB;
+
+    return valueA + valueB; 
+  }
+}
+
+const calc = new Calculator();
+
+console.log(calc.sum(3,4));
+
+/**
+ * Modules
+ */
+
+import { hello } from "./module";
+
+hello();
+
+/**
+ * Generators
+ */
+
+function* helloWorld(){
+  if(true){
+    yield("Hello");
+  }
+
+  if(true){
+    yield("World!");
+  }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+
+
