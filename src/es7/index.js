@@ -1,5 +1,5 @@
 /**
- * ECMASCRIPT 7
+ * ECMASCRIPT 7 - Junio 2016
  */
 
 /**
