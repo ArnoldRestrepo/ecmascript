@@ -80,3 +80,62 @@ console.log(education);
 
 console.log(globalVar);
 
+
+/**
+ * Objects Assign
+ */
+
+let name = 'Arnold';
+let age = 22;
+
+// ES 5
+obj = {name: name, age: age};
+
+// ES 6
+obj2 = {name, age};
+
+console.log(obj)
+
+
+/**
+ * Arrow Functions
+ */
+
+const names = [
+  {name: "Oscar", age: 22, country: "España"},
+  {name: "Ericcson", age: 34, country: "Colombia"}
+]
+
+// ES-5
+let listOfNames = names.map(function(item){
+  console.log(item.name, item.age);
+})
+
+// ES-6
+let listOfNames2 = names.map(item => console.log(item.name, item.age));
+
+let listOfNames3 = (name, age, country) => {
+  console.log(name, age, country);
+}
+
+const square = num => num * num;
+
+
+/**
+ * Promises
+ */
+
+const helloPromise = () => {
+  return new Promise((resolve, reject)=>{
+    if(true){
+      resolve("Hey");
+    } else {
+      reject("Ups!")
+    }
+  });
+}
+
+
+helloPromise()
+  .then(response => console.log(response))
+  .catch(error => console.log(error))
